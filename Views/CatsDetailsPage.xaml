@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.CatsDetailsPage"
+             xmlns:viewModels="clr-namespace:MauiApp1.ViewModels"
+             x:DataType="viewModels:CatsDetailsViewModel"
+             Title="Cat Details Page">
+    <ContentPage.ToolbarItems >
+        <ToolbarItem Text="Hello world" Order="Primary" Command="{Binding NavigateBackCommand}" Priority="0" />
+        <ToolbarItem Text="Hello world" Order="Secondary" Command="{Binding NavigateBackCommand}" Priority="1" />
+        <ToolbarItem Text="Hello world" Order="Secondary" Command="{Binding NavigateBackCommand}" Priority="2" />
+    </ContentPage.ToolbarItems>
+    <VerticalStackLayout>
+        <ActivityIndicator IsVisible="{Binding NavigateBackCommand.IsRunning}" IsRunning="{Binding NavigateBackCommand.IsRunning}" Color="Red" />
+        <Button 
+            Text="Back to Cats"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Command="{Binding NavigateBackCommand}"/>
+    </VerticalStackLayout>
+</ContentPage>

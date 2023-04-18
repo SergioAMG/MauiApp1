@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.CatsPage"
+             Title="{Binding Title}"
+             xmlns:viewModels="clr-namespace:MauiApp1.ViewModels"
+             x:DataType="viewModels:CatsViewModel">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand" Spacing="20">
+        <Label 
+            Text="{Binding Title}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button Text="Go to Cat Details" BackgroundColor="Aquamarine" TextColor="Black" BorderWidth="1" BorderColor="LightBlue" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Command="{Binding NavigateToDetailsCommand}" />
+    </VerticalStackLayout>
+</ContentPage>
